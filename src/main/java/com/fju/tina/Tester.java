@@ -10,7 +10,7 @@ public class Tester {
         System.out.println("請選擇要導覽的展區(m1,m2,m3) : ");
         int coins = 0;
         int[] times = {0, 0, 0};
-        int time = 0;
+        int[] time = {20,30,40};
         Mp3One a = new Mp3One();
         Mp3Two b = new Mp3Two();
         Mp3Three c = new Mp3Three();
@@ -22,19 +22,19 @@ public class Tester {
                 if (s.equals("m1")) {
                     coins += a.price;
                     times[0] += 1;
-                    time += 30;
+                    //time += 30;
                     System.out.println("累積: $" + coins);
                 }
                 if (s.equals("m2")) {
                     coins += b.price;
                     times[1] += 1;
-                    time += 30;
+                    //time += 30;
                     System.out.println("累積: $" + coins);
                 }
                 if (s.equals("m3")) {
                     coins += c.price;
                     times[2] += 1;
-                    time += 30;
+                    //time += 30;
                     System.out.println("累積: $" + coins);
                 }
                 if (s.equals("0")) {
@@ -44,7 +44,7 @@ public class Tester {
                     } else {
                         System.out.println("總共:" + coins + "元");
                         System.out.println("選了 m1:  " + times[0] + "台，m2: " + times[1] + "台，m3: " + times[2] + "台");
-                        System.out.println("可以租借" + "30" + "分鐘 ");
+                        System.out.println("m1可以租借: "+ time[0] + "分鐘，m2可以租借: "+ time[1] + "分鐘，m3可以租借: " + time[2] + "分鐘 ");
                         break;
                     }
                 }
