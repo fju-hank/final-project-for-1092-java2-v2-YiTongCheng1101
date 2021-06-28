@@ -22,19 +22,16 @@ public class Tester {
                 if (s.equals("m1")) {
                     coins += a.price;
                     times[0] += 1;
-                    //time += 30;
                     System.out.println("累積: $" + coins);
                 }
                 if (s.equals("m2")) {
                     coins += b.price;
                     times[1] += 1;
-                    //time += 30;
                     System.out.println("累積: $" + coins);
                 }
                 if (s.equals("m3")) {
                     coins += c.price;
                     times[2] += 1;
-                    //time += 30;
                     System.out.println("累積: $" + coins);
                 }
                 if (s.equals("0")) {
