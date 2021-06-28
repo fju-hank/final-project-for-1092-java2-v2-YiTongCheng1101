@@ -8,4 +8,7 @@ public class Mp3 {
         this.price = price;
         this.id = id;
     }
+
+    public Mp3() {
+    }
 }
