@@ -7,9 +7,8 @@ public class Tester {
     private static int price;
 
     public static void main(String[] rags) {
-        Mp3[] mp3s = {new Mp3One(), new Mp3Two(), new Mp3Three()};
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please choose the Exhibition area(m1,m2,m3) : ");
+        System.out.println("請選擇展區(m1,m2,m3) : ");
         int coins = 0;
         int[] times = {0, 0, 0};
         int time = 0;
@@ -49,33 +48,35 @@ public class Tester {
                         break;
                     }
                 }
-                System.out.println("還有要租借的嗎? 無，請按0。有 請繼續選擇m1,m2,m3");
-                s = scanner.next();
-            } else {
-                System.out.println("請按m1,m2,m3,0，才能繼續服務喔");
-                s = scanner.next();
-            }
-        }
-        System.out.println("請投入紙鈔或硬幣");
-        s = scanner.next();
-        int money = Integer.parseInt(s);
-        int surplus = money - coins;
-        if (surplus < 0) {
-            System.out.println("餘額不足!! 退還: " + money + "，歡迎下次再光臨!");
-            System.exit(0);
-        } else {
-            System.out.println("退還:");
-            if (surplus == 0) {
-                System.out.println("0元");
-            }
-            int[] divisor = {50, 10, 5, 1};
-            for (int i = 0; i < 4; i++) {
-                if (surplus >= divisor[i]) {
-                    System.out.println(surplus / divisor[i] + "個 " + divisor[i] + "元");
-                    surplus %= divisor[i];
+                    System.out.println("還有要租借的嗎? 無，請按0。有 請繼續選擇m1,m2,m3");
+                    s = scanner.next();
+                } else {
+                    System.out.println("請按m1,m2,m3,0，才能繼續服務喔");
+                    s = scanner.next();
                 }
             }
-            System.out.println("謝謝光臨!");
+            System.out.println("請投入紙鈔或硬幣");
+            s = scanner.next();
+            int money = Integer.parseInt(s);
+            int surplus = money - coins;
+            if (surplus < 0) {
+                System.out.println("餘額不足!! 退還: " + money + "，歡迎下次再光臨!");
+                System.exit(0);
+            } else {
+                System.out.println("退還:");
+                if (surplus == 0) {
+                    System.out.println("0元");
+                }
+                int[] divisor = {100, 50, 10, 5, 1};
+                for (int i = 0; i < 4; i++) {
+                    if (surplus >= divisor[i]) {
+                        System.out.println(surplus / divisor[i] + "個 " + divisor[i] + "元");
+                        surplus %= divisor[i];
+                    }
+
+                System.out.println("謝謝光臨!");
+                break;
+            }
         }
     }
 }
