@@ -1,2 +1,2 @@
-com/fju/Tester.java
- com.fju.Tester
+com/fju/tina/Mp3.java
+ com.fju.tina.Mp3
